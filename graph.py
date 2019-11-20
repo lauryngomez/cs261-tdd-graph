@@ -8,5 +8,12 @@ import functools
 
 class Graph:
 
-    pass
+    def __init__(self, data = None):
+        data = {}
 
+    def adjacent(self):
+        return False
+
+    def neighbors(self):
+        if self.__sizeof__ == 0:
+            return []

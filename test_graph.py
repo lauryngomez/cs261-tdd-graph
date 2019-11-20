@@ -22,39 +22,39 @@ class TestGraph(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate Graph.")
 
-    # def test_internal(self):
-    #     """
-    #     A graph uses an 'adjacency list' to represent vertices and edges.
-    #     """
-    #     g = Graph()
-    #     self.assertEqual(dict, type(g.data))
+    def test_internal(self):
+        """
+        A graph uses an 'adjacency list' to represent vertices and edges.
+        """
+        g = Graph()
+        self.assertEqual(dict, type(g.data))
 
     """
     Empty graphs.
     """
 
-    # def test_adjacent_empty(self):
-    #     """
-    #     An empty graph has no vertices, so adjacent returns false.
-    #     """
-    #     g = Graph()
-    #     self.assertFalse(g.adjacent('A', 'B'))
+    def test_adjacent_empty(self):
+        """
+        An empty graph has no vertices, so adjacent returns false.
+        """
+        g = Graph()
+        self.assertFalse(g.adjacent('A', 'B'))
 
-    # def test_neighbors_empty(self):
-    #     """
-    #     Asking for the neighbors of any vertex in an empty graph returns an empty
-    #     list.
-    #     """
-    #     g = Graph()
-    #     self.assertEqual([], g.neighbors('A'))
+    def test_neighbors_empty(self):
+        """
+        Asking for the neighbors of any vertex in an empty graph returns an empty
+        list.
+        """
+        g = Graph()
+        self.assertEqual([], g.neighbors('A'))
 
-    # def test_add_vertex_empty(self):
-    #     """
-    #     When storing a new vertex, the graph associates an empty list of neighbors.
-    #     """
-    #     g = Graph()
-    #     g.add_vertex('A')
-    #     self.assertEqual([], g.data['A'])
+    def test_add_vertex_empty(self):
+        """
+        When storing a new vertex, the graph associates an empty list of neighbors.
+        """
+        g = Graph()
+        g.add_vertex('A')
+        self.assertEqual([], g.data['A'])
 
     # def test_remove_vertex_nonexistent(self):
     #     """
