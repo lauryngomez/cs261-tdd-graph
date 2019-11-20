@@ -17,4 +17,14 @@ class Graph:
     def neighbors(self, vertex):
         return []
     
-    # def add_vertex(self):
+    def add_vertex(self, vertex):
+        self.data[vertex] = []
+
+    def remove_vertex(self, vertex):
+        pass
+
+    def add_edge(self, v1, v2):
+        pass
+
+    def remove_edge(self, v1, v2):
+        pass
