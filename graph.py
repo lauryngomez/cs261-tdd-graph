@@ -18,13 +18,16 @@ class Graph:
         return []
     
     def add_vertex(self, vertex):
-        self.data[vertex] = []
+        if vertex not in self.data:
+            self.data[vertex] = []
 
     def remove_vertex(self, vertex):
-        pass
+        if vertex in self.data:
+            del self.data[vertex]
 
     def add_edge(self, v1, v2):
         pass
 
     def remove_edge(self, v1, v2):
         pass
+

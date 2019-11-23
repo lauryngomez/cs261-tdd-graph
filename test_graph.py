@@ -94,54 +94,54 @@ class TestGraph(unittest.TestCase):
     Single-vertex graph.
     """
 
-    # def test_adjacent_one(self):
-    #     """
-    #     A graph with one vertex has no neighbors, so adjacent returns false.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     self.assertFalse(g.adjacent('A', 'B'))
-    #     self.assertFalse(g.adjacent('A', 'FAKE'))
+    def test_adjacent_one(self):
+        """
+        A graph with one vertex has no neighbors, so adjacent returns false.
+        """
+        g = Graph()
+        g.data['A'] = []
+        self.assertFalse(g.adjacent('A', 'B'))
+        self.assertFalse(g.adjacent('A', 'FAKE'))
 
-    # def test_neighbors_one(self):
-    #     """
-    #     Asking for the neighbors of a vertex in an graph with just one vertex
-    #     returns an empty list.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     self.assertEqual([], g.neighbors('A'))
+    def test_neighbors_one(self):
+        """
+        Asking for the neighbors of a vertex in an graph with just one vertex
+        returns an empty list.
+        """
+        g = Graph()
+        g.data['A'] = []
+        self.assertEqual([], g.neighbors('A'))
 
-    # def test_add_vertex_one(self):
-    #     """
-    #     When storing a new vertex in a graph with a single vertex, the graph
-    #     adds the new vertex and associates an empty list of neighbors.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     g.add_vertex('B')
-    #     self.assertEqual([], g.data['B'])
-    #     self.assertEqual([], g.data['A'])
+    def test_add_vertex_one(self):
+        """
+        When storing a new vertex in a graph with a single vertex, the graph
+        adds the new vertex and associates an empty list of neighbors.
+        """
+        g = Graph()
+        g.data['A'] = []
+        g.add_vertex('B')
+        self.assertEqual([], g.data['B'])
+        self.assertEqual([], g.data['A'])
 
-    # def test_add_vertex_existing(self):
-    #     """
-    #     When adding a vertex that already exists, the graph does not modify the
-    #     existing vertex.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = ['FAKE']
-    #     g.add_vertex('A')
-    #     self.assertEqual(['FAKE'], g.data['A'])
+    def test_add_vertex_existing(self):
+        """
+        When adding a vertex that already exists, the graph does not modify the
+        existing vertex.
+        """
+        g = Graph()
+        g.data['A'] = ['FAKE']
+        g.add_vertex('A')
+        self.assertEqual(['FAKE'], g.data['A'])
 
-    # def test_remove_vertex_one(self):
-    #     """
-    #     Removing a vertex from a graph removes its entry from the graph's
-    #     adjacency list.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     g.remove_vertex('A')
-    #     self.assertRaises(KeyError, operator.itemgetter('A'), g.data)
+    def test_remove_vertex_one(self):
+        """
+        Removing a vertex from a graph removes its entry from the graph's
+        adjacency list.
+        """
+        g = Graph()
+        g.data['A'] = []
+        g.remove_vertex('A')
+        self.assertRaises(KeyError, operator.itemgetter('A'), g.data)
 
     # def test_add_edge_one(self):
     #     """
