@@ -26,8 +26,10 @@ class Graph:
             del self.data[vertex]
 
     def add_edge(self, v1, v2):
-        pass
+        if not self.adjacent(v1,v2):
+            pass
 
     def remove_edge(self, v1, v2):
-        pass
+        if self.adjacent(v1,v2):
+            pass
 
